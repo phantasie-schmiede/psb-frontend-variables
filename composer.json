@@ -1,0 +1,63 @@
+{
+	"authors": [
+		{
+			"email": "dn@phantasie-schmiede.de",
+			"name": "Daniel Ablass",
+			"role": "Developer"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"PSB\\PsbFrontendVariables\\": "Classes"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"PSB\\PsbFrontendVariables\\Tests\\": "Tests"
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"typo3/class-alias-loader": true,
+			"typo3/cms-composer-installers": true
+		},
+		"bin-dir": ".Build/bin",
+		"sort-packages": true,
+		"vendor-dircom": ".Build/vendor"
+	},
+	"description": "Configuration framework for TYPO3 extension development",
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "psb_frontend_variables",
+			"web-dir": ".Build/public"
+		}
+	},
+	"keywords": [
+		"content",
+		"frontend",
+		"extension",
+		"typo3"
+	],
+	"license": "GPL-3.0-or-later",
+	"name": "psb/psb-frontend-variables",
+	"require": {
+		"php": "^8.1",
+		"psb/psb-foundation": "@dev",
+		"typo3/cms-core": "^12.4"
+	},
+	"require-dev": {
+		"roave/security-advisories": "dev-latest",
+		"typo3/testing-framework": "^7.0.1"
+	},
+	"scripts": {
+		"prepare-release": [
+			"rm -rf .Build",
+			"rm -rf .github",
+			"rm -rf Tests",
+			"rm .editorconfig",
+			"rm .gitattributes",
+			"rm .gitignore"
+		]
+	},
+	"type": "typo3-cms-extension"
+}

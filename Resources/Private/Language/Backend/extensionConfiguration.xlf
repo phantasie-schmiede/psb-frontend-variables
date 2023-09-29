@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en"
+        datatype="plaintext"
+        original="messages"
+        product-name="psb_frontend_variables"
+        date="2023-09-29T11:57:00+01:00">
+        <header />
+        <body>
+            <trans-unit id="features.frontendVariables.markerBegin">
+                <source>Beginning marker for frontend variables</source>
+            </trans-unit>
+            <trans-unit id="features.frontendVariables.markerEnd">
+                <source>Ending marker for frontend variables</source>
+            </trans-unit>
+            <trans-unit id="subCategory.settings">
+                <source>Settings</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

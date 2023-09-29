@@ -1,0 +1,11 @@
+# customsubcategory=settings=LLL:EXT:psb_frontend_variables/Resources/Private/Language/Backend/extensionConfiguration.xlf:subCategory.settings
+
+features {
+    frontendVariables {
+        # cat=basic/settings; type=boolean; label=LLL:EXT:psb_frontend_variables/Resources/Private/Language/Backend/extensionConfiguration.xlf:features.frontendVariables.markerBegin
+        markerBegin = {{
+
+        # cat=basic/settings; type=boolean; label=LLL:EXT:psb_frontend_variables/Resources/Private/Language/Backend/extensionConfiguration.xlf:features.frontendVariables.markerEnd
+        markerEnd = }}
+    }
+}

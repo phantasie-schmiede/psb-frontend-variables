@@ -1,0 +1,13 @@
+services:
+  _defaults:
+    autoconfigure: true
+    autowire: true
+    public: false
+
+  PSB\PsbFrontendVariables\:
+    resource: '../Classes/*'
+
+  PSB\PsbFrontendVariables\EventListener\InsertFrontendVariables:
+    tags:
+      - identifier: 'psbFrontendVariables_insertFrontendVariables'
+        name: event.listener
