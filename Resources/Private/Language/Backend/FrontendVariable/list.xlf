@@ -7,9 +7,6 @@
         source-language="en">
         <header />
         <body>
-            <trans-unit id="featureDisabled">
-                <source>This feature is disabled. It can be activated in extension settings.</source>
-            </trans-unit>
             <trans-unit id="header">
                 <source>Defined variables</source>
             </trans-unit>

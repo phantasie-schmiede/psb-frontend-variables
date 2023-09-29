@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en"
+        datatype="plaintext"
+        original="messages"
+        product-name="psb_frontend_variables"
+        date="2023-09-29T14:01:00+01:00">
+        <header />
+        <body>
+            <trans-unit id="ctrl.title">
+                <source>Frontend variable</source>
+            </trans-unit>
+            <trans-unit id="name">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="value">
+                <source>Value</source>
+            </trans-unit>
+            <trans-unit id="value.description">
+                <source>If the value starts with "TS:" the corresponding TypoScript path will be used as output value. You can even refer to php class constants like "\Your\Namespace\To\Your\Class::CONSTANT_NAME". Array constants can be handled, too: "\Your\Namespace\To\Your\Class::CONSTANT_ARRAY['level1']['level2']".</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

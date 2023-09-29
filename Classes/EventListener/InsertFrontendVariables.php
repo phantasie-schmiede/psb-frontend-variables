@@ -44,10 +44,6 @@ class InsertFrontendVariables
      */
     public function __invoke(AfterCacheableContentIsGeneratedEvent $event): void
     {
-        if (!$this->frontendVariableService->isEnabled()) {
-            return;
-        }
-
         $frontendVariables = $this->frontendVariableService->getVariablesForRootline(
             $event->getRequest()
                 ->getAttribute('routing')

@@ -105,16 +105,6 @@ class FrontendVariableService
     }
 
     /**
-     * @return bool
-     * @throws ExtensionConfigurationExtensionNotConfiguredException
-     * @throws ExtensionConfigurationPathDoesNotExistException
-     */
-    public function isEnabled(): bool
-    {
-        return (bool)$this->getSettings()['enabled'];
-    }
-
-    /**
      * @return array
      * @throws ExtensionConfigurationExtensionNotConfiguredException
      * @throws ExtensionConfigurationPathDoesNotExistException

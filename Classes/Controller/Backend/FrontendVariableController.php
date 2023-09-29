@@ -10,6 +10,7 @@ declare(strict_types=1);
 
 namespace PSB\PsbFrontendVariables\Controller\Backend;
 
+use Exception;
 use PSB\PsbFoundation\Attribute\ModuleAction;
 use PSB\PsbFoundation\Controller\Backend\AbstractModuleController;
 use PSB\PsbFoundation\Service\GlobalVariableProviders\RequestParameterProvider;
@@ -17,8 +18,6 @@ use PSB\PsbFoundation\Service\GlobalVariableService;
 use PSB\PsbFrontendVariables\Service\FrontendVariableService;
 use Psr\Http\Message\ResponseInterface;
 use TYPO3\CMS\Backend\Template\ModuleTemplateFactory;
-use TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationExtensionNotConfiguredException;
-use TYPO3\CMS\Core\Configuration\Exception\ExtensionConfigurationPathDoesNotExistException;
 use function is_int;
 
 /**
@@ -37,19 +36,16 @@ class FrontendVariableController extends AbstractModuleController
 
     /**
      * @return ResponseInterface
-     * @throws ExtensionConfigurationExtensionNotConfiguredException
-     * @throws ExtensionConfigurationPathDoesNotExistException
+     * @throws Exception
      */
     #[ModuleAction]
     public function listAction(): ResponseInterface
     {
         // Get selected page from page tree
-        $pid = GlobalVariableService::get(RequestParameterProvider::class . '.id');
+        $pid = GlobalVariableService::get(RequestParameterProvider::class . '.id', false);
 
-        if (!$this->frontendVariableService->isEnabled()) {
-            $this->view->assign('disabled', true);
-        } elseif (is_int($pid)) {
-            $this->view->assign('variables', $this->frontendVariableService->getVariablesForRootline($pid));
+        if (is_int($pid)) {
+            $this->moduleTemplate->assign('variables', $this->frontendVariableService->getVariablesForRootline($pid));
         }
 
         return $this->htmlResponse();
