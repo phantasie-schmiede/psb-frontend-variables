@@ -47,7 +47,7 @@
 	},
 	"require-dev": {
 		"roave/security-advisories": "dev-latest",
-		"typo3/testing-framework": "^7.0.1"
+		"typo3/testing-framework": "^8.0.9"
 	},
 	"scripts": {
 		"prepare-release": [
